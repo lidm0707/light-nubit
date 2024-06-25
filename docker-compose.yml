@@ -1,0 +1,8 @@
+services:
+  nubit-node:
+    container_name: nubit-node
+    restart: always
+    build: ./nubit-light-node
+    volumes:
+      - ${PWD}/nubit-light-node/mount:/root
+    command: bash -c "curl -sL1 https://nubit.sh | bash"
